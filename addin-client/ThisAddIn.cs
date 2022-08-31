@@ -27,7 +27,7 @@ namespace Vsto.Sample.Client
 
             var dataPublisher = new ServiceClient();
             var servicePane = Builder.BuildServicePane(dataPublisher);
-            var customTaskPane = CustomTaskPanes.Add(servicePane, "Service Pane");
+            var customTaskPane = CustomTaskPanes.Add(servicePane, "HTTP GET");
             customTaskPane.Visible = true;
             Worksheet activeSheet = null;
             Application.WorkbookActivate += book =>

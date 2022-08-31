@@ -22,6 +22,7 @@ namespace Vsto.Sample.Client.Models
         public string Endpoint { get; set; }
         public async void LoadData()
         {
+            if (string.IsNullOrWhiteSpace(Endpoint)) return;
             Log(@"Calling service...");
             var request = WebRequest.Create(Endpoint);
             Log("Authentication Level: " + request.AuthenticationLevel);

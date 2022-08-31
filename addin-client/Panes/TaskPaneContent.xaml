@@ -6,8 +6,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <DockPanel>
-        <TextBox Text="{Binding ServiceEndpoint}" DockPanel.Dock="Top"/>
-        <Button Content="Make Service Call" Command="{Binding LoadContent}"/>
+        <DockPanel DockPanel.Dock="Top">
+            <Button Content="&gt;" Command="{Binding LoadContent}" DockPanel.Dock="Right"/>
+            <TextBox Text="{Binding ServiceEndpoint}"/>
+        </DockPanel>
         <TextBox Text="{Binding Output}"/>
     </DockPanel>
 </UserControl>
